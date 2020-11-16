@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\mycontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/app', function () {
+   
+    return view('app');
+    
+});
+
+
+Route::get('/about', function () {
+
+    $job=array('p1'=>'c++','p2'=>'java','p3'=>'php');
+    return view('about')->with('job',$job);
+});
+
+
+
+
+  
+
